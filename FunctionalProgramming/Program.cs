@@ -11,7 +11,7 @@ namespace FunctionalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Exit\nEnter your option to execute");
+                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6.Exit\nEnter your option to execute");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -40,6 +40,12 @@ namespace FunctionalProgramming
                         harmonic.nthHarmonic(nth);
                         break;
                     case 5:
+                        PrimeFactors pf = new PrimeFactors();
+                        Console.WriteLine("Enter the number");
+                        int n = Convert.ToInt32(Console.ReadLine());
+                        pf.factors(n);
+                        break;
+                    case 6:
                         flag = false;
                         break;
                 }
