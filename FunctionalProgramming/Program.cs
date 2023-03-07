@@ -11,7 +11,7 @@ namespace FunctionalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6. Quotient and remainder\n7.Swap\n8.Even or odd\n9.Vowel or consonant\n10.Exit\nEnter your option to execute");
+                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6. Quotient and remainder\n7.Swap\n8.Even or odd\n9.Vowel or consonant\n10.Greatest of three\n11.Exit\nEnter your option to execute");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -72,6 +72,16 @@ namespace FunctionalProgramming
                         vowelCheck.checkVowel();
                         break;
                     case 10:
+                        GreatestOfThree great = new GreatestOfThree();
+                        Console.WriteLine("Enter a value");
+                        int a = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter b value");
+                        int b = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter c value");
+                        int c = Convert.ToInt32(Console.ReadLine());
+                        great.checkMax(a, b, c);
+                        break;
+                    case 11:
                         flag = false;
                         break;
                 }
