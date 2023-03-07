@@ -11,7 +11,7 @@ namespace FunctionalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6. Quotient and remainder\n7.Exit\nEnter your option to execute");
+                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6. Quotient and remainder\n7.Swap\n8.Exit\nEnter your option to execute");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -54,6 +54,14 @@ namespace FunctionalProgramming
                         divsion.operation(num1, num2);
                         break;
                     case 7:
+                        Swap swap = new Swap();
+                        Console.WriteLine("Enter first number");
+                        int firstNum = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter second number");
+                        int secondNum = Convert.ToInt32(Console.ReadLine());
+                        swap.swapNumbers(firstNum, secondNum);
+                        break;
+                    case 8:
                         flag = false;
                         break;
                 }
