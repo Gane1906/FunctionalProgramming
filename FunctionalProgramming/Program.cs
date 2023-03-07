@@ -11,7 +11,7 @@ namespace FunctionalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6.Exit\nEnter your option to execute");
+                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Power of 2\n4.Harmoic progression\n5.Prime factors\n6. Quotient and remainder\n7.Exit\nEnter your option to execute");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -46,6 +46,14 @@ namespace FunctionalProgramming
                         pf.factors(n);
                         break;
                     case 6:
+                        Divsion divsion = new Divsion();
+                        Console.WriteLine("Enter the first number");
+                        int num1 = Convert.ToInt32(Console.ReadLine());
+                        Console.WriteLine("Enter the second number");
+                        int num2 = Convert.ToInt32(Console.ReadLine());
+                        divsion.operation(num1, num2);
+                        break;
+                    case 7:
                         flag = false;
                         break;
                 }
