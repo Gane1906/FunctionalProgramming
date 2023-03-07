@@ -11,7 +11,7 @@ namespace FunctionalProgramming
             bool flag = true;
             while (flag)
             {
-                Console.WriteLine("1.Coin Flip\n2.Exit\nEnter your option to execute");
+                Console.WriteLine("1.Coin Flip\n2.leap year\n3.Exit\nEnter your option to execute");
                 int option = Convert.ToInt32(Console.ReadLine());
                 switch (option)
                 {
@@ -22,6 +22,12 @@ namespace FunctionalProgramming
                         coin.flip(num);
                         break;
                     case 2:
+                        LeapYear leap = new LeapYear();
+                        Console.WriteLine("Enter year");
+                        int year = Convert.ToInt32(Console.ReadLine());
+                        leap.leapChcek(year);
+                        break;
+                    case 3:
                         flag = false;
                         break;
                 }
